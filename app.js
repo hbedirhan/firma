@@ -37,10 +37,14 @@ const restartSlide = () => {
         }
     }, 15000);
 };
-
+const controlScreen = () => {
+    if (screen.width >= 800) {
+        overflowSlide();
+        restartSlide();
+    }
+}
 setInterval(() => {
-    overflowSlide();
-    restartSlide();
+    controlScreen();
 }, 16000);
 
 
