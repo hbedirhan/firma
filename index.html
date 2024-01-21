@@ -416,8 +416,9 @@
         <div class="lg:bg-[url('./assets/square.svg')] bg-auto bg-no-repeat bg-left-bottom"
             id="cards">
             <div class="container mx-auto max-w-screen-xl">
-                <div class="w-full">
-                    <div class="flex items-center flex-col lg:flex-row lg:justify-between overflow-x-hidden">
+                <div class="w-full relative h-[880px] overflow-hidden" data-carousel="slide">
+                    
+                    <div data-carousel-item class="flex items-center flex-col lg:flex-row lg:justify-between overflow-x-hidden">
                         <!-- Slider Container -->
                         <div class="swiper-wrapper">
                             <div class="swiper-slide swiper-slide-visible swiper-slide-active py-14">
@@ -438,37 +439,23 @@
                             </div>
 
                             <!-- CARD SLİDER ARROWS -->
-                            <div class="flex gap-x-3 px-10 hidden lg:flex py-6">
+                            <div class="flex gap-x-3 px-10 hidden lg:flex py-2">
 
-                                <!-- left arrow -->
-                                <button class="transform duration-300 transition -translate-y-1/2 focus:stroke-[#E24413] stroke-[#8A8A8A] hover:stroke-[#E24413]">
-                                    <svg width="48" height="22" viewBox="0 0 48 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12.2259 1C7.19894 6.02699 2 11.2259 2 11.2259M2 11.2259L12.2259 21.4519M2 11.2259H47.2929" stroke-width="1.5"></path>
-                                    </svg>
-                                </button>
-            
-                                <!-- right arrow -->
-                                <button class="transform duration-300 transition -translate-y-1/2 text-white stroke-[#8A8A8A] hover:stroke-[#E24413]">
-                                    <svg width="79" height="23" viewBox="0 0 79 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M67.067 1C72.0939 6.02699 77.2929 11.2259 77.2929 11.2259M77.2929 11.2259L67.067 21.4519M77.2929 11.2259H0" stroke-width="2"></path>
-                                    </svg>
-            
-                                </button>
                             </div>
 
                             <!-- CARD TEXTS -->
 
-                            <div class="swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+                            <div class="swiper swiper-initialized swiper-horizontal swiper-backface-hidden" >
                                 <div class="swiper-wrapper">
 
-                                    <div class="swiper-slide swiper-slide-active"
+                                    <div class="swiper-slide card-slide"
                                         style="width: 469px; margin-right: 15px;">
                                         <div class="content-field px-10">
                                             <a href="#"
                                                 class="title text-[25px] px-10 md:px-0 font-light tracking-[-1.02px] block [background:_linear-gradient(93deg,_#FFF_0%,_#E2E2E2_68.34%);] [background-clip:_text_!important_;] [-webkit-background-clip:_text_!important_;] [-webkit-text-fill-color:_transparent_!important_;] max-w-[390px] mb-[30px] md:text-[30px] text-center lg:text-start md:w-full lg:mx-0 mx-auto">Radisson
                                                 Blu Hotel, <strong> Havaalanı Abidjan 1</strong></a>
                                             <p
-                                                class="text text-[17px] font-light tracking-[-0.51px] opacity-[0.85] [background:_linear-gradient(93deg,_#FFF_0%,_#E2E2E2_68.34%);] [background-clip:_text_!important_;] [-webkit-background-clip:_text_!important_;] [-webkit-text-fill-color:_transparent_!important_;] max-w-[550px] lg:text-start text-center md:w-full lg:mx-0 mx-auto p-4 md:p-0">
+                                                class="text text-[17px] font-light tracking-[-0.51px] opacity-[0.85] text-slate-300 max-w-[550px] lg:text-start text-center md:w-full lg:mx-0 mx-auto p-4 md:p-0">
                                                 Bu proje Abidjan, Fildişi Sahili'nde yer almaktadır. 261 oda ve Genel
                                                 Alanlar dahil olmak üzere 31.000 m2'lik binanın beton ve MEP işleri
                                                 hariç tüm ticari işleri.</p>
@@ -509,17 +496,237 @@
                                 </div>
                             </div>
                         
-                            
-
                             <!-- thumbnail -->
-                            <div class="flex p-10 hidden lg:flex">
-                                <img class="w-80" src="./assets/card-image-1.png" alt="">
-                                <div>
-                                    <p></p>
+                            
+                            <div id="thumbnail" class="flex max-w-[500px] max-h-[400px] hidden lg:flex">
+                                <div class="flex-shrink-0 p-10">
+                                    <img class="w-80" src="./assets/card-image-1.png" alt="">
+                                    <div class="bg-[#1E1E1E] absolute font-light text-slate-300 translate-y-[-3rem] max-w-max lg:text-start text-center md:w-full lg:mx-0 mx-auto py-4 pr-4">
+                                        <p>Marriott Hotel Kapadokya Nevşehir</p>
+                                    </div>
+                                </div>
+                                <div class="flex-shrink-0 p-10">
+                                    <img class="w-80" src="./assets/card-image-1.png" alt="">
+                                    <div class="bg-[#1E1E1E] absolute font-light text-slate-300 translate-y-[-3rem] max-w-max lg:text-start text-center md:w-full lg:mx-0 mx-auto py-4 pr-4">
+                                        <p>Mangane Apart Rezidans Bamako</p>
+                                    </div>
+                                </div>
+                                <div class="flex-shrink-0 p-10">
+                                    <img class="w-80" src="./assets/card-image-1.png" alt="">
+                                    <div class="bg-[#1E1E1E] absolute font-light text-slate-300 translate-y-[-3rem] max-w-max lg:text-start text-center md:w-full lg:mx-0 mx-auto py-4 pr-4">
+                                        <p>Marriott Hotel Kapadokya Nevşehir</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div data-carousel-item class="flex items-center flex-col lg:flex-row lg:justify-between overflow-x-hidden">
+                        <!-- Slider Container -->
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide swiper-slide-visible swiper-slide-active py-14">
+                                <a class="image relative overflow-hidden block w-full h-[310px] sm:h-[450px] lg:h-[550px] xl:h-[750px]"
+                                    href="">
+                                    <img class="w-full h-full object-cover object-center"
+                                        src="./assets/card-image-1.png" alt="">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="right-field relative overflow-hidden">
+                            <!-- CARD TITLE -->
+                            <div class="title-field pb-[10px] md:pb-[20px]">
+                                <h1
+                                    class="text text-[30px] font-medium [background:_linear-gradient(93deg,_#E24413_0%,_#EB886A_68.34%);] [background-clip:_text_!important_;] [-webkit-background-clip:_text_!important_;] [-webkit-text-fill-color:_transparent_!important_;] lg:text-[40px] lg:text-start px-10 md:mt-10 text-center">
+                                    FİRMA Yapı <strong> Projeleri </strong></h1>
+                            </div>
+
+                            <!-- CARD SLİDER ARROWS -->
+                            <div class="flex gap-x-3 px-10 hidden lg:flex py-2">
+                            </div>
+
+                            <!-- CARD TEXTS -->
+
+                            <div class="swiper swiper-initialized swiper-horizontal swiper-backface-hidden" >
+                                <div class="swiper-wrapper">
+
+                                    <div class="swiper-slide card-slide"
+                                        style="width: 469px; margin-right: 15px;">
+                                        <div class="content-field px-10">
+                                            <a href="#"
+                                                class="title text-[25px] px-10 md:px-0 font-light tracking-[-1.02px] block [background:_linear-gradient(93deg,_#FFF_0%,_#E2E2E2_68.34%);] [background-clip:_text_!important_;] [-webkit-background-clip:_text_!important_;] [-webkit-text-fill-color:_transparent_!important_;] max-w-[390px] mb-[30px] md:text-[30px] text-center lg:text-start md:w-full lg:mx-0 mx-auto">Radisson
+                                                Blu Hotel, <strong> Havaalanı Abidjan 2</strong></a>
+                                            <p
+                                                class="text text-[17px] font-light tracking-[-0.51px] opacity-[0.85] text-slate-300 max-w-[550px] lg:text-start text-center md:w-full lg:mx-0 mx-auto p-4 md:p-0">
+                                                Bu proje Abidjan, Fildişi Sahili'nde yer almaktadır. 261 oda ve Genel
+                                                Alanlar dahil olmak üzere 31.000 m2'lik binanın beton ve MEP işleri
+                                                hariç tüm ticari işleri.</p>
+
+                                            <!-- buttons -->
+                                            <div
+                                                class="button-content flex items-center gap-[20px] pt-[40px] md:w-full md:m-auto justify-center">
+                                                <a href="#"
+                                                    class="button group h-[50px] md:px-[35px] px-[20px] md:min-w-[180px] overflow-hidden relative bg-[#E24413] border border-opacity-[0.3] flex justify-center items-center gap-[10px] duration-700 before:absolute before:-left-full before:top-0 before:w-full before:h-full before:duration-450 hover:before:left-0 hover:border-[#fff] sm:max-w-[160px] sm:px-[25px] transition after:transition-all transition-all hover:after:w-full after:h-full after:top-0 after:left-0 after:w-0 after:absolute after:bg-[#1E1E1E] after:duration-500">
+                                                    <span
+                                                        class="text relative z-[2] text-[#fff] text-[15px] font-normal xs:text-[13px]">İncele</span>
+                                                    <span
+                                                        class="relative z-[2] text-[#fff] text-[10px] h-[10px] duration-700 group-hover:translate-x-[5px]">
+                                                        <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M1 1L6 6L1 11" stroke="white" />
+                                                        </svg>
+
+                                                    </span>
+                                                </a>
+                                                <a href="#"
+                                                    class="relative inline-flex items-center h-[50px] md:px-[35px] md:min-w-[180px] overflow-hidden relative gap-[8px] justify-start inline-block px-5 py-3 overflow-hidden group border border-solid border-[#FFFFFF] border-opacity-[0.3] hover:border-transparent after:transition-all transition-all hover:after:w-full after:h-full after:top-0 after:left-0 after:w-0 after:absolute after:bg-[#E24413] after:duration-500">
+                                                    <span
+                                                        class="text relative z-[2] text-[#fff] text-[15px] font-normal xs:text-[13px] transition-colors duration-200 ease-in-out">Tüm
+                                                        Projeler</span>
+                                                    <span
+                                                        class="relative z-[2] text-[#fff] text-[10px] h-[10px] duration-700 group-hover:translate-x-[5px]">
+                                                        <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M1 1L6 6L1 11" stroke="white" />
+                                                        </svg>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        
+                            <!-- thumbnail -->
+                            
+                            <div id="thumbnail" class="flex max-w-[500px] max-h-[400px] hidden lg:flex">
+                                
+                                <div class="flex-shrink-0 p-10">
+                                    <img class="w-80" src="./assets/card-image-1.png" alt="">
+                                    <div class="bg-[#1E1E1E] absolute font-light text-slate-300 translate-y-[-3rem] max-w-max lg:text-start text-center md:w-full lg:mx-0 mx-auto py-4 pr-4">
+                                        <p>Mangane Apart Rezidans Bamako</p>
+                                    </div>
+                                </div>
+                                <div class="flex-shrink-0 p-10">
+                                    <img class="w-80" src="./assets/card-image-1.png" alt="">
+                                    <div class="bg-[#1E1E1E] absolute font-light text-slate-300 translate-y-[-3rem] max-w-max lg:text-start text-center md:w-full lg:mx-0 mx-auto py-4 pr-4">
+                                        <p>Marriott Hotel Kapadokya Nevşehir</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-carousel-item class="flex items-center flex-col lg:flex-row lg:justify-between overflow-x-hidden">
+                        <!-- Slider Container -->
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide swiper-slide-visible swiper-slide-active py-14">
+                                <a class="image relative overflow-hidden block w-full h-[310px] sm:h-[450px] lg:h-[550px] xl:h-[750px]"
+                                    href="">
+                                    <img class="w-full h-full object-cover object-center"
+                                        src="./assets/card-image-1.png" alt="">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="right-field relative overflow-hidden">
+                            <!-- CARD TITLE -->
+                            <div class="title-field pb-[10px] md:pb-[20px]">
+                                <h1
+                                    class="text text-[30px] font-medium [background:_linear-gradient(93deg,_#E24413_0%,_#EB886A_68.34%);] [background-clip:_text_!important_;] [-webkit-background-clip:_text_!important_;] [-webkit-text-fill-color:_transparent_!important_;] lg:text-[40px] lg:text-start px-10 md:mt-10 text-center">
+                                    FİRMA Yapı <strong> Projeleri </strong></h1>
+                            </div>
+
+                            <!-- CARD SLİDER ARROWS -->
+                            <div class="flex gap-x-3 px-10 hidden lg:flex py-2">
+                            </div>
+
+                            <!-- CARD TEXTS -->
+
+                            <div class="swiper swiper-initialized swiper-horizontal swiper-backface-hidden" >
+                                <div class="swiper-wrapper">
+
+                                    <div class="swiper-slide card-slide"
+                                        style="width: 469px; margin-right: 15px;">
+                                        <div class="content-field px-10">
+                                            <a href="#"
+                                                class="title text-[25px] px-10 md:px-0 font-light tracking-[-1.02px] block [background:_linear-gradient(93deg,_#FFF_0%,_#E2E2E2_68.34%);] [background-clip:_text_!important_;] [-webkit-background-clip:_text_!important_;] [-webkit-text-fill-color:_transparent_!important_;] max-w-[390px] mb-[30px] md:text-[30px] text-center lg:text-start md:w-full lg:mx-0 mx-auto">Radisson
+                                                Blu Hotel, <strong> Havaalanı Abidjan 3</strong></a>
+                                            <p
+                                                class="text text-[17px] font-light tracking-[-0.51px] opacity-[0.85] text-slate-300 max-w-[550px] lg:text-start text-center md:w-full lg:mx-0 mx-auto p-4 md:p-0">
+                                                Bu proje Abidjan, Fildişi Sahili'nde yer almaktadır. 261 oda ve Genel
+                                                Alanlar dahil olmak üzere 31.000 m2'lik binanın beton ve MEP işleri
+                                                hariç tüm ticari işleri.</p>
+
+                                            <!-- buttons -->
+                                            <div
+                                                class="button-content flex items-center gap-[20px] pt-[40px] md:w-full md:m-auto justify-center">
+                                                <a href="#"
+                                                    class="button group h-[50px] md:px-[35px] px-[20px] md:min-w-[180px] overflow-hidden relative bg-[#E24413] border border-opacity-[0.3] flex justify-center items-center gap-[10px] duration-700 before:absolute before:-left-full before:top-0 before:w-full before:h-full before:duration-450 hover:before:left-0 hover:border-[#fff] sm:max-w-[160px] sm:px-[25px] transition after:transition-all transition-all hover:after:w-full after:h-full after:top-0 after:left-0 after:w-0 after:absolute after:bg-[#1E1E1E] after:duration-500">
+                                                    <span
+                                                        class="text relative z-[2] text-[#fff] text-[15px] font-normal xs:text-[13px]">İncele</span>
+                                                    <span
+                                                        class="relative z-[2] text-[#fff] text-[10px] h-[10px] duration-700 group-hover:translate-x-[5px]">
+                                                        <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M1 1L6 6L1 11" stroke="white" />
+                                                        </svg>
+
+                                                    </span>
+                                                </a>
+                                                <a href="#"
+                                                    class="relative inline-flex items-center h-[50px] md:px-[35px] md:min-w-[180px] overflow-hidden relative gap-[8px] justify-start inline-block px-5 py-3 overflow-hidden group border border-solid border-[#FFFFFF] border-opacity-[0.3] hover:border-transparent after:transition-all transition-all hover:after:w-full after:h-full after:top-0 after:left-0 after:w-0 after:absolute after:bg-[#E24413] after:duration-500">
+                                                    <span
+                                                        class="text relative z-[2] text-[#fff] text-[15px] font-normal xs:text-[13px] transition-colors duration-200 ease-in-out">Tüm
+                                                        Projeler</span>
+                                                    <span
+                                                        class="relative z-[2] text-[#fff] text-[10px] h-[10px] duration-700 group-hover:translate-x-[5px]">
+                                                        <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M1 1L6 6L1 11" stroke="white" />
+                                                        </svg>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        
+                            <!-- thumbnail -->
+                            
+                            <div id="thumbnail" class="flex max-w-[500px] max-h-[400px] hidden lg:flex">
+                                <div class="flex-shrink-0 p-10">
+                                    <img class="w-80" src="./assets/card-image-1.png" alt="">
+                                    <div class="bg-[#1E1E1E] absolute font-light text-slate-300 translate-y-[-3rem] max-w-max lg:text-start text-center md:w-full lg:mx-0 mx-auto py-4 pr-4">
+                                        <p>Marriott Hotel Kapadokya Nevşehir</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hidden xl:block">
+
+                        <button type="button" class="absolute top-[-18.5rem] start-[50.5rem] z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                            <span class="inline-flex items-center justify-center w-15 h-15 rounded-full stroke-[#8A8A8A] hover:stroke-[#E24413]">
+                                <svg width="48" height="22" viewBox="0 0 48 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.2259 1C7.19894 6.02699 2 11.2259 2 11.2259M2 11.2259L12.2259 21.4519M2 11.2259H47.2929" stroke-width="1.5"></path>
+                                </svg>
+                                <span class="sr-only">Previous</span>
+                            </span>
+                        </button>
+                        <button type="button" class="absolute top-[-18.5rem] end-[18.5rem] z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                            <span class="inline-flex items-center justify-center w-15 h-15 rounded-full stroke-[#8A8A8A] hover:stroke-[#E24413]">
+                                <svg width="79" height="23" viewBox="0 0 79 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M67.067 1C72.0939 6.02699 77.2929 11.2259 77.2929 11.2259M77.2929 11.2259L67.067 21.4519M77.2929 11.2259H0" stroke-width="2"></path>
+                                </svg>
+                                <span class="sr-only">Next</span>
+                            </span>
+                        </button>
+                    </div>
+
+                    
 
                 </div>
             </div>
@@ -607,7 +814,7 @@
                 <div
                     class="col-span-2 grid md:grid-cols-2 p-4 bg-opacity-40 bg-white text-[#E24413] md:text-[#1B1B1B] md:opacity-40 md:hover:opacity-100 transition duration-500 ease-in-out md:hover:text-[#E24413] group">
                     <!-- text -->
-                    <div class="bg-white px-10 order-2 md:order-1">
+                    <div class="bg-white p-10 order-2 md:order-1 xs:mt-[10px]">
                         <div class="max-w-md bg-white overflow-hidden">
                             <div class="flex flex-col lg:px-10">
                                 <h1 class="text-2xl font-semibold">Körfez</h1>
@@ -772,7 +979,7 @@
                 <div
                     class="flex lg:flex-row flex-col-reverse justify-between items-center md:justify-center md:gap-[15px]">
                     <div class="flex gap-[15px] flex-col md:flex-row">
-                        <div class="md:flex-shrink-0 items-center gap-[15px]">
+                        <div class="md:flex-shrink-0 items-center gap-[15px] p-4">
                             <!-- iso -->
                             <a href="#" class="cursor-default group relative opacity-100 hover:border-opacity-0 hover:before:top-0 before:absolute before:top-full after:transition-all transition-all hover:after:w-full after:h-full after:top-0 
                             after:left-0 after:w-0 after:absolute after:bg-[#E24413] after:duration-500">
@@ -830,7 +1037,7 @@
                                 </span>
                             </a>
                         </div>
-                        <div class="md:flex-shrink-0 items-center gap-[15px]">
+                        <div class="md:flex-shrink-0 items-center gap-[15px] p-4 hidden md:flex">
                             <!-- iso -->
                             <a href="#" class="cursor-default group relative opacity-100 hover:border-opacity-0 hover:before:top-0 before:absolute before:top-full after:transition-all transition-all hover:after:w-full after:h-full after:top-0 
         after:left-0 after:w-0 after:absolute after:bg-[#E24413] after:duration-500">
@@ -888,7 +1095,7 @@
                                 </span>
                             </a>
                         </div>
-                        <div class="md:flex-shrink-0 items-center gap-[15px]">
+                        <div class="md:flex-shrink-0 items-center gap-[15px] p-4 hidden md:flex">
                             <!-- iso -->
                             <a href="#" class="cursor-default group relative opacity-100 hover:border-opacity-0 hover:before:top-0 before:absolute before:top-full after:transition-all transition-all hover:after:w-full after:h-full after:top-0 
                             after:left-0 after:w-0 after:absolute after:bg-[#E24413] after:duration-500">
@@ -1327,7 +1534,7 @@
     </footer>
 
 
-
+    <script src="https://flowbite.com/docs/flowbite.min.js"></script>
     <script src="app.js"></script>
 </body>
 
