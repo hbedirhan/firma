@@ -2,23 +2,21 @@ const openBTN = document.querySelector('#openBTN');
 const closeBTN = document.querySelector('#closeBTN');
 const mobileMENU = document.querySelector('#mobileMENU');
 
-openBTN.addEventListener('click', () => {
-    setTimeout(() => {
-        openBTN.classList.add('hidden');
-        closeBTN.classList.remove('hidden');
-        mobileMENU.classList.remove('hidden');
-    }, 200);
-});
+const openMobile = () => {
+    openBTN.classList.add('hidden');
+    closeBTN.classList.remove('hidden');
+    mobileMENU.classList.remove('hidden');
+}
+const closeMobile = () => {
+    closeBTN.classList.add('hidden');
+    openBTN.classList.remove('hidden');
+    mobileMENU.classList.add('hidden');
+}
 
-closeBTN.addEventListener('click', () => {
+openBTN.addEventListener('click', openMobile);
+closeBTN.addEventListener('click', closeMobile);
 
-    setTimeout(() => {
-        closeBTN.classList.add('hidden');
-        openBTN.classList.remove('hidden');
-        mobileMENU.classList.add('hidden');
-    }, 200);
 
-});
 
 const infiniteSlide = document.querySelectorAll('.infiniteSlide');
 
@@ -46,3 +44,31 @@ setInterval(() => {
 }, 16000);
 
 
+const communicationSlide = document.querySelectorAll('.communicationSlide');
+
+const coverflowSlide = () => {
+    for (let i = 0; i < communicationSlide.length; i++) {
+        const element = communicationSlide[i];
+        element.style.transition = 'transform 10s linear';
+        element.style.transform = `translateX(-400%)`;
+    }
+};
+
+const crestartSlide = () => {
+    setTimeout(() => {
+        for (let i = 0; i < communicationSlide.length; i++) {
+            const element = communicationSlide[i];
+            element.style.transition = 'none';
+            element.style.transform = 'translateX(0)';
+        }
+    }, 15000);
+};
+
+setInterval(() => {
+    if (screen.width < 800) {
+        setInterval(() => {
+            coverflowSlide();
+            crestartSlide();
+        }, 16000);
+    }
+}, 17000);
