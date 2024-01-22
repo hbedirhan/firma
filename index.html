@@ -25,10 +25,6 @@
         background-color: #1E1E1E;
     }
 
-    #slider {
-        background-image: url('./assets/slide.png');
-    }
-
     .arrow-btn-group button:hover {
         stroke-opacity: 1 !important;
         transition: all;
@@ -255,11 +251,11 @@
 
     <!-- slider -->
     <section class="container mx-auto max-w-screen-xl px-4">
-        <div id="slider" class="relative h-[32rem] md:h-screen bg-cover bg-center flex items-center justify-center">
+        <div class="bg-[url('./assets/slide.png')] relative h-[32rem] md:h-screen bg-cover bg-center flex items-center justify-center">
             <div class="flex flex-col absolute gap-x-1 md:left-20 lg:left-40 top-24 left-6">
 
                 <!-- arrow group -->
-                <div class="flex gap-x-1 arrow-btn-group">
+                <div class="flex gap-x-1 arrow-btn-group hidden lg:flex">
 
                     <!-- left arrow -->
                     <button
@@ -273,7 +269,7 @@
 
                     <!-- right arrow -->
                     <button
-                        class="transform duration-300 transition -translate-y-1/2 text-white p-2 stroke-[#111111] hover:stroke-[#E24413]">
+                        class="transform duration-300 transition -translate-y-1/2 text-white p-2 stroke-[#111111] hover:stroke-[#E24413] group">
                         <svg width="79" height="23" viewBox="0 0 79 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M67.067 1C72.0939 6.02699 77.2929 11.2259 77.2929 11.2259M77.2929 11.2259L67.067 21.4519M77.2929 11.2259H0"
@@ -413,8 +409,7 @@
 
     <!-- cards -->
     <section class="bg-[#1E1E1E]">
-        <div class="lg:bg-[url('./assets/square.svg')] bg-auto bg-no-repeat bg-left-bottom"
-            id="cards">
+        <div class="lg:bg-[url('./assets/square.svg')] bg-auto bg-no-repeat bg-left-bottom">
             <div class="container mx-auto max-w-screen-xl">
                 <div class="w-full relative h-[880px] overflow-hidden" data-carousel="slide">
                     
@@ -506,13 +501,13 @@
                                     </div>
                                 </div>
                                 <div class="flex-shrink-0 p-10">
-                                    <img class="w-80" src="./assets/card-image-1.png" alt="">
+                                    <img class="w-80 h-full" src="./assets/card-image-2.png" alt="">
                                     <div class="bg-[#1E1E1E] absolute font-light text-slate-300 translate-y-[-3rem] max-w-max lg:text-start text-center md:w-full lg:mx-0 mx-auto py-4 pr-4">
                                         <p>Mangane Apart Rezidans Bamako</p>
                                     </div>
                                 </div>
                                 <div class="flex-shrink-0 p-10">
-                                    <img class="w-80" src="./assets/card-image-1.png" alt="">
+                                    <img class="w-80" src="./assets/card-image-3.png" alt="">
                                     <div class="bg-[#1E1E1E] absolute font-light text-slate-300 translate-y-[-3rem] max-w-max lg:text-start text-center md:w-full lg:mx-0 mx-auto py-4 pr-4">
                                         <p>Marriott Hotel Kapadokya Nevşehir</p>
                                     </div>
@@ -524,17 +519,17 @@
                         <!-- Slider Container -->
                         <div class="swiper-wrapper">
                             <div class="swiper-slide swiper-slide-visible swiper-slide-active py-14">
-                                <a class="image relative overflow-hidden block w-full h-[310px] sm:h-[450px] lg:h-[550px] xl:h-[750px]"
+                                <a class="image relative overflow-hidden block w-full h-[310px] sm:h-[450px] lg:h-[550px] xl:h-[750px] xl:w-[780px]"
                                     href="">
                                     <img class="w-full h-full object-cover object-center"
-                                        src="./assets/card-image-1.png" alt="">
+                                        src="./assets/card-image-2.png" alt="">
                                 </a>
                             </div>
 
                         </div>
                         <div class="right-field relative overflow-hidden">
                             <!-- CARD TITLE -->
-                            <div class="title-field pb-[10px] md:pb-[20px]">
+                            <div class="title-field pb-[10px] md:pb-[20px] xl:pb-[60px]">
                                 <h1
                                     class="text text-[30px] font-medium [background:_linear-gradient(93deg,_#E24413_0%,_#EB886A_68.34%);] [background-clip:_text_!important_;] [-webkit-background-clip:_text_!important_;] [-webkit-text-fill-color:_transparent_!important_;] lg:text-[40px] lg:text-start px-10 md:mt-10 text-center">
                                     FİRMA Yapı <strong> Projeleri </strong></h1>
@@ -602,13 +597,13 @@
                             <div id="thumbnail" class="flex max-w-[500px] max-h-[400px] hidden lg:flex">
                                 
                                 <div class="flex-shrink-0 p-10">
-                                    <img class="w-80" src="./assets/card-image-1.png" alt="">
+                                    <img class="w-80 h-full" src="./assets/card-image-2.png" alt="">
                                     <div class="bg-[#1E1E1E] absolute font-light text-slate-300 translate-y-[-3rem] max-w-max lg:text-start text-center md:w-full lg:mx-0 mx-auto py-4 pr-4">
                                         <p>Mangane Apart Rezidans Bamako</p>
                                     </div>
                                 </div>
                                 <div class="flex-shrink-0 p-10">
-                                    <img class="w-80" src="./assets/card-image-1.png" alt="">
+                                    <img class="w-80" src="./assets/card-image-3.png" alt="">
                                     <div class="bg-[#1E1E1E] absolute font-light text-slate-300 translate-y-[-3rem] max-w-max lg:text-start text-center md:w-full lg:mx-0 mx-auto py-4 pr-4">
                                         <p>Marriott Hotel Kapadokya Nevşehir</p>
                                     </div>
@@ -620,17 +615,17 @@
                         <!-- Slider Container -->
                         <div class="swiper-wrapper">
                             <div class="swiper-slide swiper-slide-visible swiper-slide-active py-14">
-                                <a class="image relative overflow-hidden block w-full h-[310px] sm:h-[450px] lg:h-[550px] xl:h-[750px]"
+                                <a class="image relative overflow-hidden block w-full h-[310px] sm:h-[450px] lg:h-[550px] xl:h-[750px] xl:w-[780px]"
                                     href="">
                                     <img class="w-full h-full object-cover object-center"
-                                        src="./assets/card-image-1.png" alt="">
+                                        src="./assets/card-image-3.png" alt="">
                                 </a>
                             </div>
 
                         </div>
                         <div class="right-field relative overflow-hidden">
                             <!-- CARD TITLE -->
-                            <div class="title-field pb-[10px] md:pb-[20px]">
+                            <div class="title-field pb-[10px] md:pb-[20px] xl:pb-[60px]">
                                 <h1
                                     class="text text-[30px] font-medium [background:_linear-gradient(93deg,_#E24413_0%,_#EB886A_68.34%);] [background-clip:_text_!important_;] [-webkit-background-clip:_text_!important_;] [-webkit-text-fill-color:_transparent_!important_;] lg:text-[40px] lg:text-start px-10 md:mt-10 text-center">
                                     FİRMA Yapı <strong> Projeleri </strong></h1>
@@ -697,7 +692,7 @@
                             
                             <div id="thumbnail" class="flex max-w-[500px] max-h-[400px] hidden lg:flex">
                                 <div class="flex-shrink-0 p-10">
-                                    <img class="w-80" src="./assets/card-image-1.png" alt="">
+                                    <img class="w-80" src="./assets/card-image-3.png" alt="">
                                     <div class="bg-[#1E1E1E] absolute font-light text-slate-300 translate-y-[-3rem] max-w-max lg:text-start text-center md:w-full lg:mx-0 mx-auto py-4 pr-4">
                                         <p>Marriott Hotel Kapadokya Nevşehir</p>
                                     </div>
@@ -747,7 +742,7 @@
                     class="col-span-2 grid md:grid-cols-2 p-4 bg-opacity-40 bg-white text-[#E24413] md:text-[#1B1B1B] md:opacity-40 md:hover:opacity-100 transition duration-500 ease-in-out md:hover:text-[#E24413] group">
                     <div class="bg-white p-4 flex justify-center">
                         <!-- logo -->
-                        <div class="max-w-md bg-white overflow-hidden relative p-10">
+                        <div class="max-w-md bg-white overflow-hidden relative px-2 py-10">
                             <div class="absolute top-0 left-0 right-0 bottom-0"
                                 style="background: radial-gradient(rgba(250, 235, 227, 0.915), rgba(255, 255, 255, 0));;">
                             </div>
